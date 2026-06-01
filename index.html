@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – All Bank Balance Check</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0d1b2a;
+      --deep-blue: #1b3a6b;
+      --mid-blue: #2562b8;
+      --accent: #d4a843;
+      --cream: #faf7f2;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --border: #dde3ef;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 64px 40px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,98,184,0.35) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: 10%;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,168,67,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(212,168,67,0.18);
+      border: 1px solid rgba(212,168,67,0.45);
+      color: var(--accent);
+      font-family: 'Source Serif 4', serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    header h1 span {
+      color: var(--accent);
+    }
+
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .meta-item {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+    }
+
+    .meta-item strong {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 2px;
+    }
+
+    /* Main layout */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 40px 100px;
+    }
+
+    /* Intro box */
+    .intro-box {
+      background: white;
+      border-left: 4px solid var(--mid-blue);
+      border-radius: 0 8px 8px 0;
+      padding: 24px 28px;
+      margin-bottom: 52px;
+      box-shadow: 0 2px 16px rgba(13,27,42,0.07);
+    }
+
+    .intro-box p {
+      font-size: 15.5px;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+
+    .intro-box p:last-child { margin-bottom: 0; }
+
+    /* Sections */
+    section {
+      margin-bottom: 52px;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    section:nth-child(1)  { animation-delay: 0.05s; }
+    section:nth-child(2)  { animation-delay: 0.10s; }
+    section:nth-child(3)  { animation-delay: 0.15s; }
+    section:nth-child(4)  { animation-delay: 0.20s; }
+    section:nth-child(5)  { animation-delay: 0.25s; }
+    section:nth-child(6)  { animation-delay: 0.30s; }
+    section:nth-child(7)  { animation-delay: 0.35s; }
+    section:nth-child(8)  { animation-delay: 0.40s; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .section-num {
+      width: 32px; height: 32px;
+      background: var(--deep-blue);
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--deep-blue);
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      font-size: 15.5px;
+      color: #2c2c3e;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* Third-party links list */
+    .provider-list {
+      list-style: none;
+      margin: 16px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .provider-list li a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--mid-blue);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .provider-list li a::before {
+      content: '→';
+      font-size: 13px;
+      color: var(--accent);
+      transition: transform 0.2s;
+    }
+
+    .provider-list li a:hover {
+      color: var(--deep-blue);
+      border-color: var(--mid-blue);
+    }
+
+    .provider-list li a:hover::before {
+      transform: translateX(3px);
+    }
+
+    /* Bullet list */
+    .bullet-list {
+      list-style: none;
+      margin: 14px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .bullet-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15.5px;
+      color: #2c2c3e;
+      line-height: 1.7;
+    }
+
+    .bullet-list li::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    /* Divider */
+    .divider {
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, var(--border), transparent);
+      margin: 0 0 52px;
+    }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--navy);
+      color: white;
+      border-radius: 12px;
+      padding: 36px 36px 32px;
+      margin-top: 0;
+    }
+
+    .contact-card h2 {
+      color: white;
+      margin-bottom: 6px;
+    }
+
+    .contact-card .section-num {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .contact-card p {
+      color: rgba(255,255,255,0.65);
+      font-size: 14.5px;
+      margin-bottom: 24px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      min-width: 70px;
+    }
+
+    .contact-value {
+      font-size: 14.5px;
+      color: white;
+    }
+
+    .contact-value a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(212,168,67,0.3);
+      transition: border-color 0.2s;
+    }
+
+    .contact-value a:hover {
+      border-color: var(--accent);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 28px 40px 48px;
+      font-size: 12.5px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 44px 24px 40px; }
+      .container { padding: 40px 24px 72px; }
+      .contact-card { padding: 28px 24px; }
+      h2 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="badge">Legal Document</div>
+    <h1>Privacy <span>Policy</span></h1>
+    <p style="color:rgba(255,255,255,0.55); font-size:15px; margin-top:8px;">All Bank Balance Check Application</p>
+    <div class="header-meta">
+      <div class="meta-item"><strong>Company</strong>Gurukrupa Infosoft</div>
+      <div class="meta-item"><strong>Effective Date</strong>June 1, 2026</div>
+      <div class="meta-item"><strong>Platform</strong>Google Play Store</div>
+      <div class="meta-item"><strong>Model</strong>Free App</div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Intro -->
+  <div class="intro-box">
+    <p>Gurukrupa Infosoft built the <strong>All Bank Balance Check</strong> app as a free application. This SERVICE is provided by Gurukrupa Infosoft at no cost and is intended for use as is.</p>
+    <p>This page informs visitors regarding our policies with the collection, use, and disclosure of Personal Information for anyone who decides to use our Service. By using our Service, you agree to the collection and use of information in relation to this policy.</p>
+    <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible within the app unless otherwise defined here.</p>
+  </div>
+
+  <!-- 1. Information Collection -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Information Collection and Use</h2>
+    </div>
+    <p>The <strong>All Bank Balance Check</strong> app does not collect any personally identifiable information from its users. Any data accessed on your device remains on your device and is not transmitted to or collected by us in any way.</p>
+    <p>However, the app uses third-party services that may collect information used to identify you. Please refer to the privacy policies of these service providers:</p>
+    <ul class="provider-list">
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></li>
+      <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a></li>
+      <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a></li>
+      <li><a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener">Microsoft Clarity</a></li>
+    </ul>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- 2. Log Data -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>Log Data</h2>
+    </div>
+    <p>Whenever you use our Service and an error occurs in the app, we collect data and information (through third-party products) called Log Data. This Log Data may include information such as your device Internet Protocol ("IP") address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- 3. Cookies -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>Cookies</h2>
+    </div>
+    <p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.</p>
+    <p>This Service does not use cookies explicitly. However, the app may use third-party code and libraries that use cookies to collect information and improve their services. You have the option to accept or refuse these cookies. If you refuse, you may not be able to use some portions of this Service.</p>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- 4. Service Providers -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>Service Providers</h2>
+    </div>
+    <p>We may employ third-party companies and individuals for the following reasons:</p>
+    <ul class="bullet-list">
+      <li>To facilitate our Service;</li>
+      <li>To provide the Service on our behalf;</li>
+      <li>To perform Service-related services; or</li>
+      <li>To assist us in analyzing how our Service is used.</li>
+    </ul>
+    <p style="margin-top:16px;">These third parties have access to certain non-personal information (such as device data or usage statistics) to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- 5. Security -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>Security</h2>
+    </div>
+    <p>We value your trust in using our Service and strive to use commercially acceptable means of protecting it. However, please remember that no method of transmission over the internet, or method of electronic storage, is 100% secure and reliable. We cannot guarantee its absolute security.</p>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- 6. Links to Other Sites -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>Links to Other Sites</h2>
+    </div>
+    <p>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- 7. Children's Privacy -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2>Children's Privacy</h2>
+    </div>
+    <p>This Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13 years of age. If we discover that a child under 13 has provided us with personal information, we will immediately delete it from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so we can take the necessary actions.</p>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- 8. Changes -->
+  <section>
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <h2>Changes to This Privacy Policy</h2>
+    </div>
+    <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. Changes are effective immediately after they are posted.</p>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- 9. Contact -->
+  <section>
+    <div class="contact-card">
+      <div class="section-header">
+        <div class="section-num">9</div>
+        <h2>Contact Us</h2>
+      </div>
+      <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to reach out.</p>
+      <div class="contact-details">
+        <div class="contact-row">
+          <span class="contact-label">Company</span>
+          <span class="contact-value">Gurukrupa Infosoft</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">App</span>
+          <span class="contact-value">All Bank Balance Check</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">
+            <a href="mailto:tech.gurukrupa.infosoft@gmail.com">tech.gurukrupa.infosoft@gmail.com</a>
+          </span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Platform</span>
+          <span class="contact-value">Google Play Store</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 Gurukrupa Infosoft &nbsp;·&nbsp; All Bank Balance Check &nbsp;·&nbsp; Privacy Policy
+</footer>
+
+</body>
+</html>
