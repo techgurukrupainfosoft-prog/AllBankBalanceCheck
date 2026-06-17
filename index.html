@@ -2,518 +2,469 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy – All Bank Balance Check</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f766e" />
+  <meta name="description" content="Privacy Policy for Calculator: Hide Photos & Videos by Gurukrupa Infosoft. Your photos, videos, notes and passwords are encrypted and stay only on your device." />
+  <meta name="robots" content="index, follow" />
+  <title>Privacy Policy — Calculator: Hide Photos &amp; Videos</title>
+
   <style>
     :root {
-      --navy: #0d1b2a;
-      --deep-blue: #1b3a6b;
-      --mid-blue: #2562b8;
-      --accent: #d4a843;
-      --cream: #faf7f2;
-      --text: #1a1a2e;
-      --muted: #6b7280;
-      --border: #dde3ef;
+      --bg:          #f5f7f9;
+      --page:        #ffffff;
+      --ink:         #1f2733;
+      --ink-soft:    #586273;
+      --ink-faint:   #8a93a3;
+      --line:        #e6e9ee;
+      --line-soft:   #111b27;
+      --brand:       #0f766e;
+      --brand-dark:  #0b5a54;
+      --brand-soft:  #e7f3f1;
+      --danger:      #b4453c;
+      --radius:      14px;
+      --radius-sm:   10px;
+      --maxw:        780px;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
     body {
-      background: var(--cream);
-      color: var(--text);
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-weight: 300;
-      line-height: 1.8;
-      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.72;
+      font-size: 16.5px;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Header */
-    header {
-      background: var(--navy);
-      color: white;
-      padding: 64px 40px 56px;
-      position: relative;
-      overflow: hidden;
-    }
+    a { color: var(--brand); text-decoration: none; word-break: break-word; }
+    a:hover, a:focus { text-decoration: underline; }
 
-    header::before {
-      content: '';
-      position: absolute;
-      top: -80px; right: -80px;
-      width: 320px; height: 320px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(37,98,184,0.35) 0%, transparent 70%);
-      pointer-events: none;
+    /* ---------- Top bar ---------- */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid var(--line);
     }
-
-    header::after {
-      content: '';
-      position: absolute;
-      bottom: -60px; left: 10%;
-      width: 200px; height: 200px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(212,168,67,0.18) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .header-inner {
-      max-width: 760px;
+    .topbar .inner {
+      max-width: var(--maxw);
       margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .badge {
-      display: inline-block;
-      background: rgba(212,168,67,0.18);
-      border: 1px solid rgba(212,168,67,0.45);
-      color: var(--accent);
-      font-family: 'Source Serif 4', serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(2.2rem, 5vw, 3.4rem);
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      color: white;
-      margin-bottom: 12px;
-    }
-
-    header h1 span {
-      color: var(--accent);
-    }
-
-    .header-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin-top: 28px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .meta-item {
-      font-size: 13px;
-      color: rgba(255,255,255,0.6);
-      font-weight: 300;
-    }
-
-    .meta-item strong {
-      display: block;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-      margin-bottom: 2px;
-    }
-
-    /* Main layout */
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 60px 40px 100px;
-    }
-
-    /* Intro box */
-    .intro-box {
-      background: white;
-      border-left: 4px solid var(--mid-blue);
-      border-radius: 0 8px 8px 0;
-      padding: 24px 28px;
-      margin-bottom: 52px;
-      box-shadow: 0 2px 16px rgba(13,27,42,0.07);
-    }
-
-    .intro-box p {
-      font-size: 15.5px;
-      color: var(--text);
-      line-height: 1.75;
-      margin-bottom: 12px;
-    }
-
-    .intro-box p:last-child { margin-bottom: 0; }
-
-    /* Sections */
-    section {
-      margin-bottom: 52px;
-      animation: fadeUp 0.5s ease both;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    section:nth-child(1)  { animation-delay: 0.05s; }
-    section:nth-child(2)  { animation-delay: 0.10s; }
-    section:nth-child(3)  { animation-delay: 0.15s; }
-    section:nth-child(4)  { animation-delay: 0.20s; }
-    section:nth-child(5)  { animation-delay: 0.25s; }
-    section:nth-child(6)  { animation-delay: 0.30s; }
-    section:nth-child(7)  { animation-delay: 0.35s; }
-    section:nth-child(8)  { animation-delay: 0.40s; }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
-
-    .section-num {
-      width: 32px; height: 32px;
-      background: var(--deep-blue);
-      color: white;
-      font-family: 'Playfair Display', serif;
-      font-size: 13px;
-      font-weight: 700;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--deep-blue);
-      letter-spacing: -0.01em;
-    }
-
-    p {
-      font-size: 15.5px;
-      color: #2c2c3e;
-      line-height: 1.85;
-      margin-bottom: 14px;
-    }
-
-    p:last-child { margin-bottom: 0; }
-
-    /* Third-party links list */
-    .provider-list {
-      list-style: none;
-      margin: 16px 0 0;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .provider-list li a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--mid-blue);
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 600;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s, color 0.2s;
-    }
-
-    .provider-list li a::before {
-      content: '→';
-      font-size: 13px;
-      color: var(--accent);
-      transition: transform 0.2s;
-    }
-
-    .provider-list li a:hover {
-      color: var(--deep-blue);
-      border-color: var(--mid-blue);
-    }
-
-    .provider-list li a:hover::before {
-      transform: translateX(3px);
-    }
-
-    /* Bullet list */
-    .bullet-list {
-      list-style: none;
-      margin: 14px 0 0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .bullet-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 15.5px;
-      color: #2c2c3e;
-      line-height: 1.7;
-    }
-
-    .bullet-list li::before {
-      content: '';
-      width: 6px; height: 6px;
-      background: var(--accent);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 8px;
-    }
-
-    /* Divider */
-    .divider {
-      border: none;
-      height: 1px;
-      background: linear-gradient(to right, var(--border), transparent);
-      margin: 0 0 52px;
-    }
-
-    /* Contact card */
-    .contact-card {
-      background: var(--navy);
-      color: white;
-      border-radius: 12px;
-      padding: 36px 36px 32px;
-      margin-top: 0;
-    }
-
-    .contact-card h2 {
-      color: white;
-      margin-bottom: 6px;
-    }
-
-    .contact-card .section-num {
-      background: rgba(255,255,255,0.12);
-    }
-
-    .contact-card p {
-      color: rgba(255,255,255,0.65);
-      font-size: 14.5px;
-      margin-bottom: 24px;
-    }
-
-    .contact-details {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .contact-row {
+      padding: 14px 24px;
       display: flex;
       align-items: center;
       gap: 12px;
     }
+    .brandmark {
+      width: 34px; height: 34px;
+      border-radius: 9px;
+      background: var(--brand);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+    .brandmark svg { width: 18px; height: 18px; }
+    .topbar .name { font-weight: 700; font-size: 15px; letter-spacing: -0.01em; }
+    .topbar .by { font-size: 12.5px; color: var(--ink-faint); }
 
-    .contact-label {
-      font-size: 11px;
-      font-weight: 600;
+    /* ---------- Hero ---------- */
+    .hero {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 56px 24px 36px;
+    }
+    .hero .eyebrow {
+      font-size: 12.5px;
+      font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      min-width: 70px;
+      color: var(--brand);
+    }
+    .hero h1 {
+      margin: 12px 0 14px;
+      font-size: clamp(28px, 5.5vw, 40px);
+      line-height: 1.18;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+    .hero p.lead {
+      color: var(--ink-soft);
+      font-size: clamp(15px, 2.4vw, 18px);
+      max-width: 620px;
+    }
+    .hero .updated {
+      margin-top: 22px;
+      display: inline-block;
+      font-size: 13px;
+      color: var(--ink-faint);
     }
 
-    .contact-value {
-      font-size: 14.5px;
-      color: white;
+    /* ---------- Trust cards ---------- */
+    .trust {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 8px 24px 4px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .trust .card {
+      background: var(--page);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+    }
+    .trust .ic {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: var(--brand-soft);
+      display: grid; place-items: center;
+      margin-bottom: 12px;
+    }
+    .trust .ic svg { width: 20px; height: 20px; stroke: var(--brand); }
+    .trust h3 { font-size: 15px; margin-bottom: 4px; letter-spacing: -0.01em; }
+    .trust p { font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; }
+
+    /* ---------- Document ---------- */
+    main {
+      max-width: var(--maxw);
+      margin: 28px auto 0;
+      background: var(--page);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
     }
 
-    .contact-value a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(212,168,67,0.3);
-      transition: border-color 0.2s;
+    .toc {
+      padding: 26px 36px;
+      border-bottom: 1px solid var(--line);
+    }
+    .toc h2 {
+      font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--ink-faint); margin-bottom: 14px; font-weight: 700;
+    }
+    .toc ol {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px 28px;
+      counter-reset: toc;
+    }
+    .toc li { counter-increment: toc; font-size: 14.5px; }
+    .toc li a { color: var(--ink-soft); display: flex; gap: 10px; }
+    .toc li a::before {
+      content: counter(toc, decimal-leading-zero);
+      color: var(--brand);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .toc li a:hover { color: var(--brand); text-decoration: none; }
+
+    .doc { padding: 8px 36px 36px; }
+
+    section { padding: 28px 0; border-bottom: 1px solid var(--line-soft); }
+    section:last-child { border-bottom: none; }
+    section.intro { padding-top: 24px; }
+
+    section h2 {
+      font-size: clamp(18px, 3vw, 22px);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      margin-bottom: 6px;
+      scroll-margin-top: 80px;
+    }
+    section h2 .num {
+      color: var(--brand);
+      font-size: 14px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      margin-right: 10px;
+    }
+    section h3 {
+      font-size: 15.5px;
+      font-weight: 700;
+      margin: 22px 0 8px;
+      color: var(--ink);
     }
 
-    .contact-value a:hover {
-      border-color: var(--accent);
+    section p { color: var(--ink-soft); margin: 10px 0; }
+    section p strong, section li strong { color: var(--ink); font-weight: 600; }
+
+    ul.clean { list-style: none; margin: 12px 0; display: grid; gap: 9px; }
+    ul.clean li {
+      position: relative; padding-left: 24px; color: var(--ink-soft);
+    }
+    ul.clean li::before {
+      content: ""; position: absolute; left: 3px; top: 10px;
+      width: 6px; height: 6px; border-radius: 50%; background: var(--brand);
+    }
+    ul.clean.no li::before {
+      width: 9px; height: 2px; border-radius: 0; top: 13px; background: var(--danger);
     }
 
-    /* Footer */
+    .callout {
+      margin: 18px 0;
+      padding: 16px 18px 16px 20px;
+      border-radius: var(--radius-sm);
+      background: var(--brand-soft);
+      border-left: 3px solid var(--brand);
+      color: var(--ink);
+      font-size: 15px;
+    }
+
+    .perm {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      margin: 12px 0;
+    }
+    .perm .name { font-weight: 600; color: var(--ink); display: block; }
+    .perm .code {
+      display: block;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 11.5px; color: var(--brand-dark); margin-top: 3px;
+      word-break: break-word;
+    }
+    .perm p { margin: 8px 0 0; font-size: 14.5px; }
+
+    .contact-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 20px 22px;
+      margin-top: 14px;
+      background: var(--bg);
+    }
+    .contact-card .row { display: flex; gap: 12px; flex-wrap: wrap; padding: 5px 0; }
+    .contact-card .k { color: var(--ink-faint); min-width: 84px; font-size: 14px; }
+    .contact-card .v { color: var(--ink); font-weight: 600; }
+
+    /* ---------- Footer ---------- */
     footer {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 28px 24px 60px;
       text-align: center;
-      padding: 28px 40px 48px;
-      font-size: 12.5px;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
+      color: var(--ink-faint);
+      font-size: 13px;
+      line-height: 1.8;
     }
+    footer .sep { opacity: 0.5; margin: 0 8px; }
+    footer a { color: var(--ink-soft); }
 
-    @media (max-width: 600px) {
-      header { padding: 44px 24px 40px; }
-      .container { padding: 40px 24px 72px; }
-      .contact-card { padding: 28px 24px; }
-      h2 { font-size: 1.25rem; }
+    /* ---------- Responsive ---------- */
+    @media (max-width: 720px) {
+      .trust { grid-template-columns: 1fr; }
+      .toc, .doc { padding-left: 22px; padding-right: 22px; }
+      .toc ol { grid-template-columns: 1fr; }
+      .hero { padding-top: 40px; }
     }
+    @media (max-width: 420px) {
+      body { font-size: 16px; }
+      .topbar .inner, .hero, .trust { padding-left: 18px; padding-right: 18px; }
+      .toc, .doc { padding-left: 18px; padding-right: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
-<body>
 
-<header>
-  <div class="header-inner">
-    <div class="badge">Legal Document</div>
-    <h1>Privacy <span>Policy</span></h1>
-    <p style="color:rgba(255,255,255,0.55); font-size:15px; margin-top:8px;">All Bank Balance Check Application</p>
-    <div class="header-meta">
-      <div class="meta-item"><strong>Company</strong>Gurukrupa Infosoft</div>
-      <div class="meta-item"><strong>Effective Date</strong>June 1, 2026</div>
-      <div class="meta-item"><strong>Platform</strong>Google Play Store</div>
-      <div class="meta-item"><strong>Model</strong>Free App</div>
-    </div>
-  </div>
-</header>
-
-<div class="container">
-
-  <!-- Intro -->
-  <div class="intro-box">
-    <p>Gurukrupa Infosoft built the <strong>All Bank Balance Check</strong> app as a free application. This SERVICE is provided by Gurukrupa Infosoft at no cost and is intended for use as is.</p>
-    <p>This page informs visitors regarding our policies with the collection, use, and disclosure of Personal Information for anyone who decides to use our Service. By using our Service, you agree to the collection and use of information in relation to this policy.</p>
-    <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible within the app unless otherwise defined here.</p>
-  </div>
-
-  <!-- 1. Information Collection -->
-  <section>
-    <div class="section-header">
-      <div class="section-num">1</div>
-      <h2>Information Collection and Use</h2>
-    </div>
-    <p>The <strong>All Bank Balance Check</strong> app does not collect any personally identifiable information from its users. Any data accessed on your device remains on your device and is not transmitted to or collected by us in any way.</p>
-    <p>However, the app uses third-party services that may collect information used to identify you. Please refer to the privacy policies of these service providers:</p>
-    <ul class="provider-list">
-      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></li>
-      <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a></li>
-      <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a></li>
-      <li><a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener">Microsoft Clarity</a></li>
-    </ul>
-  </section>
-
-  <hr class="divider"/>
-
-  <!-- 2. Log Data -->
-  <section>
-    <div class="section-header">
-      <div class="section-num">2</div>
-      <h2>Log Data</h2>
-    </div>
-    <p>Whenever you use our Service and an error occurs in the app, we collect data and information (through third-party products) called Log Data. This Log Data may include information such as your device Internet Protocol ("IP") address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
-  </section>
-
-  <hr class="divider"/>
-
-  <!-- 3. Cookies -->
-  <section>
-    <div class="section-header">
-      <div class="section-num">3</div>
-      <h2>Cookies</h2>
-    </div>
-    <p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.</p>
-    <p>This Service does not use cookies explicitly. However, the app may use third-party code and libraries that use cookies to collect information and improve their services. You have the option to accept or refuse these cookies. If you refuse, you may not be able to use some portions of this Service.</p>
-  </section>
-
-  <hr class="divider"/>
-
-  <!-- 4. Service Providers -->
-  <section>
-    <div class="section-header">
-      <div class="section-num">4</div>
-      <h2>Service Providers</h2>
-    </div>
-    <p>We may employ third-party companies and individuals for the following reasons:</p>
-    <ul class="bullet-list">
-      <li>To facilitate our Service;</li>
-      <li>To provide the Service on our behalf;</li>
-      <li>To perform Service-related services; or</li>
-      <li>To assist us in analyzing how our Service is used.</li>
-    </ul>
-    <p style="margin-top:16px;">These third parties have access to certain non-personal information (such as device data or usage statistics) to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
-  </section>
-
-  <hr class="divider"/>
-
-  <!-- 5. Security -->
-  <section>
-    <div class="section-header">
-      <div class="section-num">5</div>
-      <h2>Security</h2>
-    </div>
-    <p>We value your trust in using our Service and strive to use commercially acceptable means of protecting it. However, please remember that no method of transmission over the internet, or method of electronic storage, is 100% secure and reliable. We cannot guarantee its absolute security.</p>
-  </section>
-
-  <hr class="divider"/>
-
-  <!-- 6. Links to Other Sites -->
-  <section>
-    <div class="section-header">
-      <div class="section-num">6</div>
-      <h2>Links to Other Sites</h2>
-    </div>
-    <p>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
-  </section>
-
-  <hr class="divider"/>
-
-  <!-- 7. Children's Privacy -->
-  <section>
-    <div class="section-header">
-      <div class="section-num">7</div>
-      <h2>Children's Privacy</h2>
-    </div>
-    <p>This Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13 years of age. If we discover that a child under 13 has provided us with personal information, we will immediately delete it from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so we can take the necessary actions.</p>
-  </section>
-
-  <hr class="divider"/>
-
-  <!-- 8. Changes -->
-  <section>
-    <div class="section-header">
-      <div class="section-num">8</div>
-      <h2>Changes to This Privacy Policy</h2>
-    </div>
-    <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. Changes are effective immediately after they are posted.</p>
-  </section>
-
-  <hr class="divider"/>
-
-  <!-- 9. Contact -->
-  <section>
-    <div class="contact-card">
-      <div class="section-header">
-        <div class="section-num">9</div>
-        <h2>Contact Us</h2>
-      </div>
-      <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to reach out.</p>
-      <div class="contact-details">
-        <div class="contact-row">
-          <span class="contact-label">Company</span>
-          <span class="contact-value">Gurukrupa Infosoft</span>
-        </div>
-        <div class="contact-row">
-          <span class="contact-label">App</span>
-          <span class="contact-value">All Bank Balance Check</span>
-        </div>
-        <div class="contact-row">
-          <span class="contact-label">Email</span>
-          <span class="contact-value">
-            <a href="mailto:tech.gurukrupa.infosoft@gmail.com">tech.gurukrupa.infosoft@gmail.com</a>
-          </span>
-        </div>
-        <div class="contact-row">
-          <span class="contact-label">Platform</span>
-          <span class="contact-value">Google Play Store</span>
-        </div>
+<body id="top">
+  <div class="topbar">
+    <div class="inner">
+      <span class="brandmark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.5 4.5 5.5v5.2c0 4.6 3.1 8.4 7.5 9.8 4.4-1.4 7.5-5.2 7.5-9.8V5.5L12 2.5Z"
+                stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="m9 12 2 2 4-4.5" stroke="#fff" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <div>
+        <div class="name">Calculator: Hide Photos &amp; Videos</div>
+        <div class="by">by Gurukrupa Infosoft</div>
       </div>
     </div>
-  </section>
+  </div>
 
-</div>
+  <header class="hero">
+    <div class="eyebrow">Privacy Policy</div>
+    <h1>How we protect your privacy</h1>
+    <p class="lead">Your photos, videos, notes and passwords are encrypted and stay only on your device. We can never see them, and they are never uploaded to us or anyone else.</p>
+    <div class="updated">Last updated: 15 June 2026</div>
+  </header>
 
-<footer>
-  &copy; 2026 Gurukrupa Infosoft &nbsp;·&nbsp; All Bank Balance Check &nbsp;·&nbsp; Privacy Policy
-</footer>
+  <div class="trust">
+    <div class="card">
+      <div class="ic" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Stored on your device</h3>
+      <p>Vault content is never uploaded to us or any third party.</p>
+    </div>
+    <div class="card">
+      <div class="ic" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 5 6v5c0 4.2 2.9 7.7 7 9 4.1-1.3 7-4.8 7-9V6l-7-3Z" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>AES-256 encrypted</h3>
+      <p>Files and database are protected with strong encryption.</p>
+    </div>
+    <div class="card">
+      <div class="ic" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke-width="1.8"/><path d="m6.5 6.5 11 11" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
+      <h3>No account</h3>
+      <p>No sign-up, no profiling, and we never sell your data.</p>
+    </div>
+  </div>
 
+  <main>
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#s1">Information We Collect</a></li>
+        <li><a href="#s2">How We Use Information</a></li>
+        <li><a href="#s3">Permissions We Request</a></li>
+        <li><a href="#s4">Sharing and Third Parties</a></li>
+        <li><a href="#s5">Storage, Security &amp; Retention</a></li>
+        <li><a href="#s6">Deleting Your Data</a></li>
+        <li><a href="#s7">Children's Privacy</a></li>
+        <li><a href="#s8">Your Privacy Rights</a></li>
+        <li><a href="#s9">Contact Us</a></li>
+        <li><a href="#s10">Changes to This Policy</a></li>
+      </ol>
+    </nav>
+
+    <div class="doc">
+      <section class="intro">
+        <p>This Privacy Policy explains how <strong>Gurukrupa Infosoft</strong> ("we", "us", or "our") handles information in connection with the mobile application <strong>"Calculator: Hide Photos &amp; Videos"</strong> (the "App").</p>
+        <p>We built the App to keep your private content private. The photos, videos, notes and passwords you store in the App are encrypted and kept only on your own device. We cannot see them, and they are never uploaded to us or to anyone else. Please read this Policy to understand exactly what is and is not collected.</p>
+      </section>
+
+      <section id="s1">
+        <h2><span class="num">01</span>Information We Collect</h2>
+
+        <h3>1.1 Content you store in the App (stays on your device)</h3>
+        <p>The App lets you store photos, videos, notes and passwords in a private vault, protected by a PIN unlock. All of this content, together with your PIN, is:</p>
+        <ul class="clean">
+          <li>encrypted on your device using strong encryption (AES-256-GCM via Google Tink for files, and an encrypted SQLCipher database for notes and passwords), with the encryption key protected by the Android Keystore;</li>
+          <li>stored only in the App's private storage area on your device; and</li>
+          <li>never transmitted to us, our servers, or any third party.</li>
+        </ul>
+        <div class="callout">We never receive, view, or have access to your vault content or your PIN. Your PIN is stored only as a salted one-way hash on your device and cannot be recovered by us.</div>
+
+        <h3>1.2 Information we do NOT collect</h3>
+        <ul class="clean no">
+          <li>We do <strong>not</strong> require you to create an account or log in.</li>
+          <li>We do <strong>not</strong> collect your name, email address, phone number, or contacts.</li>
+          <li>We do <strong>not</strong> collect your precise location.</li>
+          <li>We do <strong>not</strong> sell your personal information to anyone.</li>
+          <li>We do <strong>not</strong> show third-party advertisements in the App.</li>
+        </ul>
+
+        <h3>1.3 Anonymous analytics and diagnostic data</h3>
+        <p>To understand how the App is used and to fix problems and improve it, we use Google Firebase Analytics, a service provided by Google. Firebase Analytics collects anonymous, aggregated information such as:</p>
+        <ul class="clean">
+          <li>app open and screen-view events and basic in-app interactions;</li>
+          <li>approximate session and usage statistics;</li>
+          <li>a randomly generated app-instance identifier;</li>
+          <li>general device and technical information such as device model, operating system version, app version, language, and coarse country/region (derived from IP address, which Google does not retain in analytics reports).</li>
+        </ul>
+        <p>This analytics data is anonymous and aggregated. It <strong>never</strong> includes your photos, videos, notes, passwords, PIN, or any content stored in your vault. We use this data only to improve the App and never to identify you personally.</p>
+        <p>For more on how Google processes this data, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a>.</p>
+      </section>
+
+      <section id="s2">
+        <h2><span class="num">02</span>How We Use Information</h2>
+        <p>We use the limited information described above only to:</p>
+        <ul class="clean">
+          <li>operate and maintain the App;</li>
+          <li>understand which features are used so we can improve them;</li>
+          <li>diagnose crashes, errors, and performance issues; and</li>
+          <li>keep the App secure and prevent misuse.</li>
+        </ul>
+        <p>We do not use any information for advertising, profiling, or automated decision-making, and we do not sell or rent any information.</p>
+      </section>
+
+      <section id="s3">
+        <h2><span class="num">03</span>Permissions We Request and Why</h2>
+        <p>The App requests only the permissions it needs for the features you use. You can grant or deny these in your device settings at any time; denying a permission may disable the related feature.</p>
+
+        <div class="perm">
+          <span class="name">Photos and videos</span>
+          <span class="code">READ_MEDIA_IMAGES · READ_MEDIA_VIDEO · READ_MEDIA_VISUAL_USER_SELECTED · READ_EXTERNAL_STORAGE</span>
+          <p>Used only so you can select photos and videos from your device to import into your private vault. The App reads only the items you choose. Imported media is encrypted inside the vault and is not sent anywhere.</p>
+        </div>
+        <div class="perm">
+          <span class="name">Storage write on older devices</span>
+          <span class="code">WRITE_EXTERNAL_STORAGE (Android 9 and below only)</span>
+          <p>Used only when you choose to export an item out of the vault back to your device.</p>
+        </div>
+        <div class="perm">
+          <span class="name">Internet</span>
+          <span class="code">INTERNET</span>
+          <p>Used only to send the anonymous Firebase Analytics data described in Section 1.3. Your vault content is never transmitted.</p>
+        </div>
+      </section>
+
+      <section id="s4">
+        <h2><span class="num">04</span>Sharing and Third Parties</h2>
+        <p>We do not share your personal information with third parties, except as follows:</p>
+        <ul class="clean">
+          <li><strong>Google Firebase Analytics</strong> processes the anonymous analytics data described in Section 1.3 on our behalf. Google's use of that data is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+          <li><strong>Legal reasons:</strong> we may disclose information if required to do so by law, or in response to a valid legal request, or to protect the rights, property, or safety of our users or others. In practice, because your vault content never reaches us, we have no such content to disclose.</li>
+        </ul>
+      </section>
+
+      <section id="s5">
+        <h2><span class="num">05</span>Data Storage, Security and Retention</h2>
+        <p>Your vault content is stored only on your device, encrypted as described in Section 1.1, and remains under your control. We retain no copy of it.</p>
+        <p>Anonymous analytics data is retained by Google Firebase according to Google's standard retention settings.</p>
+        <p>We apply reasonable technical measures to protect information, but no method of electronic storage is completely secure. You are responsible for keeping your PIN and your device secure.</p>
+      </section>
+
+      <section id="s6">
+        <h2><span class="num">06</span>Deleting Your Data</h2>
+        <p>Because your vault content lives only on your device, you are in full control of it:</p>
+        <ul class="clean">
+          <li>You can delete individual items, notes, or passwords inside the App at any time.</li>
+          <li>Uninstalling the App permanently removes all vault content and all locally stored data from your device. This cannot be undone, so export anything you wish to keep first.</li>
+        </ul>
+        <p>If you wish to request deletion of anonymous analytics data associated with your app instance, contact us at the email in Section 9.</p>
+      </section>
+
+      <section id="s7">
+        <h2><span class="num">07</span>Children's Privacy</h2>
+        <p>The App is not directed to children under the age of 13 (or the minimum age required in your country), and we do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will take appropriate action.</p>
+      </section>
+
+      <section id="s8">
+        <h2><span class="num">08</span>Your Privacy Rights</h2>
+        <p>Depending on where you live, you may have rights under laws such as the EU/UK General Data Protection Regulation (GDPR) or the California Consumer Privacy Act (CCPA), including the right to access, correct, or delete personal data, to object to or restrict processing, to data portability, and to withdraw consent.</p>
+        <p>Because the App does not collect content or account data about you, the only data involved is the anonymous analytics described in Section 1.3. To exercise any applicable right, or to ask us a question, contact us at the email in Section 9 and we will respond as required by applicable law. You also have the right to lodge a complaint with your local data protection authority.</p>
+        <div class="callout">You can prevent all analytics collection by uninstalling the App.</div>
+      </section>
+
+      <section id="s9">
+        <h2><span class="num">09</span>Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy, contact us at:</p>
+        <div class="contact-card">
+          <div class="row"><span class="k">Email</span><span class="v"><a href="mailto:tech.gurukrupa.infosoft@gmail.com">tech.gurukrupa.infosoft@gmail.com</a></span></div>
+          <div class="row"><span class="k">Developer</span><span class="v">Gurukrupa Infosoft</span></div>
+        </div>
+      </section>
+
+      <section id="s10">
+        <h2><span class="num">10</span>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top and, where appropriate, provide additional notice. Your continued use of the App after a change takes effect means you accept the updated Policy.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div>&copy; 2026 Gurukrupa Infosoft<span class="sep">·</span>Calculator: Hide Photos &amp; Videos</div>
+    <div><a href="#top">Back to top ↑</a></div>
+  </footer>
 </body>
 </html>
